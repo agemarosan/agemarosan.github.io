@@ -1,0 +1,73 @@
+html{
+    width: 85%;
+    max-width: 900px;
+    margin: 50px auto 20px auto;
+    font-family:"Inter","Noto Sans JP",sans-serif;
+    font-weight: 330;
+}
+
+*{
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.32);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+}
+header h1{
+    margin:13px 0px 13px 20px;
+}
+header a{
+    color: #333;
+}
+h1{font-size: 2em;}
+h2{font-size: 1.5em;}
+h3{font-size: 1.2em;}
+h4{font-size: 1em;}
+h5{font-size: 0.8em;}
+h6{font-size: 0.7em;}
+p{font-size: 1em;}
+h1,h2{
+    color: #333;
+}
+h2::before{
+    content:"┃"
+}
+a{
+    font-weight: bold;
+    color: #2062b8;
+    text-decoration: none;
+    line-height: 1.5;
+}
+a:hover{
+    text-decoration: underline;
+}
+summary {
+  list-style: none; /* 標準的なブラウザ */
+}
+summary::-webkit-details-marker {
+  display: none; /* Safari用 */
+}
+
+.custom-details summary {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+}
+
+.custom-details summary::before {
+  content: "＋";
+  margin-right: 10px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.custom-details[open] summary::before {
+  content: "－";
+  transform: rotate(180deg); 
+}
